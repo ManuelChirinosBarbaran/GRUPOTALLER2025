@@ -1,4 +1,3 @@
-import
 package com.example.Taller_2025.Models;
 
 import jakarta.persistence.Entity;
