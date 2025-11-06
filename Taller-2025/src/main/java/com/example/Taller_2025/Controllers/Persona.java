@@ -22,20 +22,6 @@ public class Persona {
     @Autowired
     PersonaService personaService;
 
-    @GetMapping("/listar")
-    public List<PersonaModel> listar() {
-        return personaService.listar();
-    }
-
-    @PutMapping("/editar")
-    public PersonaModel editar(@RequestBody PersonaModel persona) {
-        return personaService.editar(persona);
-    }
-
-    @DeleteMapping("/eliminar")
-    public void eliminar(@RequestAttribute("id") int id) {
-        personaService.eliminar(id);
-    }
 
     @PostMapping("/guardar")
     public PersonaModel guardar(@RequestBody PersonaModel persona) {
