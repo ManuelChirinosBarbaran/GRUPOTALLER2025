@@ -4,13 +4,7 @@ import com.example.Taller_2025.Models.PersonaModel;
 import com.example.Taller_2025.Service.PersonaService;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,8 +18,8 @@ public class Persona {
 
 
     @PostMapping("/guardar")
-    public PersonaModel guardar(@RequestBody PersonaModel persona) {
-        return personaService.guardar(persona);
+    public PersonaModel add(@RequestBody PersonaModel persona) {
+        return personaService.add(persona);
     }
 
 }

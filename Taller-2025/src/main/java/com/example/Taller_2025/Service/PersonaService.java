@@ -7,16 +7,14 @@ import com.example.Taller_2025.Models.PersonaModel;
 import com.example.Taller_2025.Repository.PersonaRepository;
 
 @Service
-public class PersonaService
-implement IPersonaService
-{
+public class PersonaService implements IPersonaService{
 
     @Autowired
     PersonaRepository personaRepository;
 
     @Override
-    public PersonaModel guardar(PersonaModel persona) {
-        return IpersonaRepository.save(persona);
+    public PersonaModel add(PersonaModel personaModel) {
+        return personaRepository.save(per);
     }
 
 }
